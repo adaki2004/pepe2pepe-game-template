@@ -1,0 +1,1 @@
+{"name":"pepe2pepe-game-template","version":"1.0.0","private":true,"type":"module","engines":{"node":">=22.12"},"scripts":{"brief":"node scripts/prepare-job.mjs","build":"node scripts/build.mjs","test":"node --test tests/*.test.mjs","release":"node scripts/release-game.mjs"},"license":"MIT"}
