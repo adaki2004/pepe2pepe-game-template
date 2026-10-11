@@ -38,3 +38,5 @@ Public API reference: https://pepe2pepe.fun/games/docs/openapi.json. Public cata
 - 409: stop and inspect the receipt; do not generate replacement IDs blindly.
 - Rejected: read the private reason, fix in a new version, submit the replacement through Swarm.
 - Approved: return the public arcade player link. Hidden means no longer discoverable; IPFS is still public.
+
+New submissions require a Swarm job ID. The API checks that the job completed, published this CID and contains the same manifest. This verifies publication, not creator identity or asset rights. Admin review still checks those claims. Existing submissions and their original private receipts remain usable.
