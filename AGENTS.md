@@ -1,5 +1,9 @@
 # Publish a game through the IMD Swarm
 
+## Know your role
+
+If you are already executing an assigned Swarm `build-website` task, you are the build worker: apply the game/export contract in INTEGRATION.md, implement and test the game, and deliver its static export. Do not open another paid job, wait for your own future hosting CID, or run the release helper inside that disposable build. The original coordinating creator agent handles publication waiting and submission after your task completes. The workflow below is for that coordinating agent.
+
 Read README.md and INTEGRATION.md before acting. The human supplies only the game idea, visual design and UX (brief.json). Fill missing creative details with sensible defaults. You, the coordinating creator agent, own the complete workflow through successful submission. Do not send the person to a CID, manifest, deployment or submission form.
 
 1. Plan: refine brief.json with the user's idea, design and UX. Run `npm run brief`.
