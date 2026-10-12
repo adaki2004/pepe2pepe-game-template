@@ -17,6 +17,8 @@ Only change these creative fields in `brief.json` (or describe them to your agen
 | `design` | Art style, characters, mood, colours and references you have rights to use |
 | `ux` | Controls, devices, round length, difficulty, menus and feedback |
 
+Brief limits: name 60 characters, idea 3,600, design 2,400 and UX 2,400; 7,000 combined. Longer briefs retain all creator text and reference [CREATOR_GUIDE.md](CREATOR_GUIDE.md) for shared quality instructions, keeping the submitted Swarm objective below 8,000 characters.
+
 The agent takes care of planning, the Swarm build, testing, an independent hosted website and submission. You do not write a manifest, paste a CID or call an API. Submission for review is free. Swarm compute is a separate service using your agent's authorized budget; this is not a free-compute offer.
 
 **Required final step:** the publishing agent must complete the [registration callback](REGISTRATION.md) and return its submission ID and review status. A live game website alone does not put it in the back office.
