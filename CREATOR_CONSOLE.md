@@ -38,3 +38,9 @@ The creator funds the vault with a wallet-confirmed token transfer. The platform
 All creator requests are POST /v1/arcade/creator through the trusted website proxy, with an EIP-191 signature by the manifest's verified creator. The five-minute authorization message binds the game, action, timestamp, and (for edits) the exact ordered policy and revision. The backend validates owner independently; an address supplied by the browser is never proof of ownership. Edits use a monotonically increasing revision, so replaying an old signed edit cannot restore previous settings. Read authorization stays in browser memory only. No authorization belongs in a URL, analytics event or log.
 
 The public static game never receives owner authorization. AI is used only for creation guidance; the verifier executes only the built-in reviewed engine, never generated server code. See ARCADE_REWARDS.md for the gameplay interface.
+
+## Public launchpad activity
+
+[Launchpad activity](https://pepe2pepe.fun/games/activity) shows aggregate website briefs, token/browser split, build pipeline, review queues, listed releases and a 14-day UTC submission chart. GET /v1/launchpad-stats returns only aggregate numbers and timestamps, cached for 60 seconds with concurrent requests combined into one database read. It does not query the blockchain.
+
+A token brief is an intent, not a deployed token. Listed token games count only approved releases with an on-chain manifest. Website brief totals include declined requests and count each request ID once. Release totals are separate; external-agent submissions have no matching website-build receipt. Hidden/rejected releases do not count as published. Distinct versions may have separate release IDs. No private brief, contact, wallet, IP, signature or capability is selected for this endpoint.
