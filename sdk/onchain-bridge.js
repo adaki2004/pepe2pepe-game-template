@@ -1,9 +1,9 @@
 // Bundle locally. `standalone` implements the same request API using the verified deployment.
-export function createPepeChainBridge({standalone,onPause=()=>{},onResume=()=>{}}={}){
+export function createPepeChainBridge({standalone,onPause=()=>{},onResume=()=>{},onInit=()=>{}}={}){
  let channel=null,counter=0;const pending=new Map(),embedded=window.parent!==window;
  const send=data=>window.parent.postMessage({protocol:'pepe-game/1',channel,...data},'*');
  function receive(event){if(event.source!==window.parent||event.data?.protocol!=='pepe-game/1')return;const m=event.data;
-  if(m.type==='init'&&typeof m.channel==='string'){if(channel&&channel!==m.channel)for(const p of pending.values()){clearTimeout(p.timer);p.reject(Error('Host session changed.'));}if(channel!==m.channel)pending.clear();channel=m.channel;send({type:'ready'});return;}
+  if(m.type==='init'&&typeof m.channel==='string'){if(channel&&channel!==m.channel)for(const p of pending.values()){clearTimeout(p.timer);p.reject(Error('Host session changed.'));}if(channel!==m.channel)pending.clear();const changed=channel!==m.channel;channel=m.channel;if(changed)onInit({preview:m.preview===true});send({type:'ready'});return;}
   if(m.channel!==channel)return;if(m.type==='pause')onPause();if(m.type==='resume')onResume();
   if(m.type==='chain-result'){const p=pending.get(m.id);if(!p)return;pending.delete(m.id);clearTimeout(p.timer);if(m.error)p.reject(Error(String(m.error)));else p.resolve(m.result);}
  }

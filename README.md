@@ -48,3 +48,7 @@ Read [INTEGRATION.md](INTEGRATION.md) for the manifest/iframe contract and [WATC
 ## Games with an on-chain token
 
 Use the website’s **On-chain game + token** option for lightweight, single-player games whose contracts verify moves and claims. Read [ONCHAIN.md](ONCHAIN.md) for creator ownership, supply and fee allocations, the wallet bridge, publication workflow and review requirements. This is a separate, explicitly authorized workflow; the ordinary browser template remains wallet-free.
+
+## Games with verified arcade rewards
+
+The optional [ARCADE_REWARDS.md](ARCADE_REWARDS.md) route uses a shared backend to verify a bounded input transcript and issue an EIP-712 reward voucher. Players claim tokens themselves and pay network gas. It currently supports the frozen dodge-and-shoot rules, not arbitrary score submissions. The creator funds rewards; only the launch build is sponsored. [SDK](sdk/arcade-client.js).

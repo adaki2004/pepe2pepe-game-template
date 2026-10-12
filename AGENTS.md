@@ -1,5 +1,9 @@
 # Publish a game through the IMD Swarm
 
+## Verified arcade workflow exception
+
+When the approved workflow references ARCADE_REWARDS.md, follow it instead of the contract-only gameplay rules in ONCHAIN.md. Use the frozen engine and reward vault, mandatory host session API, and platform-signed claims submitted by players. No AI during play, no score-trusting endpoint, no private server or player gas sponsorship. Standalone publication is a landing page linking to hosted play; provide a non-reward review demo. Do not invent custom reward rules or launch from a browser-only brief.
+
 ## On-chain workflow exception
 
 When assigned a contract-to-website workflow that explicitly references ONCHAIN.md, follow ONCHAIN.md for contracts, token economics, ownership, wallet bridge and export. The browser-only prohibition on wallets does not apply to that explicit route. Do not turn a browser-game assignment into a token launch yourself.
