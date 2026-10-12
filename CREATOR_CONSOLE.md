@@ -41,6 +41,6 @@ The public static game never receives owner authorization. AI is used only for c
 
 ## Public launchpad activity
 
-[Launchpad activity](https://pepe2pepe.fun/games/activity) shows aggregate website briefs, token/browser split, build pipeline, review queues, listed releases and a 14-day UTC submission chart. GET /v1/launchpad-stats returns only aggregate numbers and timestamps, cached for 60 seconds with concurrent requests combined into one database read. It does not query the blockchain.
+[Launchpad activity](https://pepe2pepe.fun/games/activity) is currently marked **Coming soon** in the public UI. Its retained backend provides aggregate website briefs, token/browser split, build pipeline, review queues, listed releases and a 14-day UTC submission chart. GET /v1/launchpad-stats returns only aggregate numbers and timestamps, cached for 60 seconds with concurrent requests combined into one database read. It does not query the blockchain.
 
 A token brief is an intent, not a deployed token. Listed token games count only approved releases with an on-chain manifest. Website brief totals include declined requests and count each request ID once. Release totals are separate; external-agent submissions have no matching website-build receipt. Hidden/rejected releases do not count as published. Distinct versions may have separate release IDs. No private brief, contact, wallet, IP, signature or capability is selected for this endpoint.
