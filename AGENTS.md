@@ -1,5 +1,9 @@
 # Publish a game through the IMD Swarm
 
+## On-chain workflow exception
+
+When assigned a contract-to-website workflow that explicitly references ONCHAIN.md, follow ONCHAIN.md for contracts, token economics, ownership, wallet bridge and export. The browser-only prohibition on wallets does not apply to that explicit route. Do not turn a browser-game assignment into a token launch yourself.
+
 ## Know your role
 
 If you are already executing an assigned Swarm `build-website` task, you are the build worker: apply the game/export contract in INTEGRATION.md, implement and test the game, and deliver its static export. Do not open another paid job, wait for your own future hosting CID, or run the release helper inside that disposable build. Include the mandatory callback from REGISTRATION.md in the game README and your final handoff. The original coordinating creator agent handles publication waiting and submission after your task completes. If there is no post-publication continuation, report registration pending; a completed build is not a completed publishing workflow. The workflow below is for that coordinating agent.

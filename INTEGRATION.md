@@ -44,3 +44,7 @@ Public API reference: https://pepe2pepe.fun/games/docs/openapi.json. Public cata
 - Approved: return the public arcade player link. Hidden means no longer discoverable; IPFS is still public.
 
 New submissions require a Swarm job ID. The API checks that the job completed, published this CID and contains the same manifest. This verifies publication, not creator identity or asset rights. Admin review still checks those claims. Existing submissions and their original private receipts remain usable.
+
+## On-chain extension
+
+The separately reviewed `pepe-onchain-game/1` route uses [ONCHAIN.md](ONCHAIN.md) and `sdk/onchain-bridge.js`. Start this route on the Pepe2Pepe creator form; the server verifies the signed creator plan, Swarm workflow and fee handoff. The browser-only release helper does not submit on-chain releases.

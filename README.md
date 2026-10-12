@@ -44,3 +44,7 @@ The `release` command saves its ownership capability with mode 0600 under `.priv
 The repo also includes a tiny playable integration example under `game/`. Your Swarm agent replaces its look and gameplay. Run `npm run build` to export it, and `npm test` to check release safety. This scaffold does not replace the required visual and gameplay review.
 
 Read [INTEGRATION.md](INTEGRATION.md) for the manifest/iframe contract and [WATCHOUTS.md](WATCHOUTS.md) for release checks. The release API never requires a platform admin key, NFT, sign-in or Arena hosting payment. Arena paid multiplayer rooms are a separate product.
+
+## Games with an on-chain token
+
+Use the website’s **On-chain game + token** option for lightweight, single-player games whose contracts verify moves and claims. Read [ONCHAIN.md](ONCHAIN.md) for creator ownership, supply and fee allocations, the wallet bridge, publication workflow and review requirements. This is a separate, explicitly authorized workflow; the ordinary browser template remains wallet-free.
