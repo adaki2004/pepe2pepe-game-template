@@ -19,6 +19,8 @@ Only change these creative fields in `brief.json` (or describe them to your agen
 
 The agent takes care of planning, the Swarm build, testing, an independent hosted website and submission. You do not write a manifest, paste a CID or call an API. Submission for review is free. Swarm compute is a separate service using your agent's authorized budget; this is not a free-compute offer.
 
+**Required final step:** the publishing agent must complete the [registration callback](REGISTRATION.md) and return its submission ID and review status. A live game website alone does not put it in the back office.
+
 **After submission:** the game waits for a human administrator to play and approve it. Approved games appear under Community games, alongside other independent releases. Submission does not guarantee listing.
 
 ## For the coordinating agent

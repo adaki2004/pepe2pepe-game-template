@@ -18,6 +18,10 @@ The player sandbox is `allow-scripts allow-pointer-lock`; no same-origin storage
 
 The parent sends `{protocol:'pepe-game/1', type:'init', channel:string}`. Check `event.source === parent`, save the channel and reply ready. Handle pause/resume only with matching source, protocol and channel. On game over send a finite nonnegative integer score. `parent.postMessage(message, '*')` is necessary for opaque origins; it must never contain secrets. See game/bridge.js for a small implementation. Scores are display hints only, not proof for payouts.
 
+## Mandatory registration callback
+
+Follow [REGISTRATION.md](REGISTRATION.md). The final `POST /v1/game-submissions` is required, not optional. Never report end-to-end completion without the returned submission ID and review status. Include these instructions in the build-worker handoff so the post-publication agent knows it must finish registration.
+
 ## Complete the Swarm lifecycle
 
 1. Generate `.private/job.json` from the creative brief.
