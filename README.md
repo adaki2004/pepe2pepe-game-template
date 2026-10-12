@@ -52,3 +52,7 @@ Use the website’s **On-chain game + token** option for lightweight, single-pla
 ## Games with verified arcade rewards
 
 The optional [ARCADE_REWARDS.md](ARCADE_REWARDS.md) route uses a shared backend to verify a bounded input transcript and issue an EIP-712 reward voucher. Players claim tokens themselves and pay network gas. It currently supports the frozen dodge-and-shoot rules, not arbitrary score submissions. The creator funds rewards; only the launch build is sponsored. [SDK](sdk/arcade-client.js).
+
+## Creator operations
+
+See [CREATOR_CONSOLE.md](CREATOR_CONSOLE.md) for owner activity, funding and reward controls, and [BUILD_SIZES.md](BUILD_SIZES.md) for measured sizes and current publishing limits.

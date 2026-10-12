@@ -1,5 +1,6 @@
 # Game quality and publication requirements
 
+Read [ART_DIRECTION.md](ART_DIRECTION.md): every game needs a distinct visual identity and an original, gameplay-specific cover.
 Deliver a finished HTML5 game with a clear goal, satisfying core loop, onboarding, meaningful challenge, pause, game-over and instant replay. No concept page or placeholder prototype.
 
 Art direction: honour my idea, design and UX. Give characters, environments, menus, HUD and cover one distinctive identity: memorable silhouettes, intentional composition, cohesive colours, readable contrast, crafted animation and responsive hit/collect/win feedback. Use layered scenery, lighting, particles, camera motion and sound where they improve play. Honour reduced motion and include mute. Avoid generic AI-template styling, unrelated gradients, emoji-as-art, stock dashboard cards and placeholder geometry unless simple shapes serve a deliberate art style. Make an original game, not a reskin of the examples.

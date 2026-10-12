@@ -1,5 +1,6 @@
 # Creator-owned on-chain games — pepe-onchain-game/1
 
+Read [ART_DIRECTION.md](ART_DIRECTION.md): every game needs a distinct visual identity and an original, gameplay-specific cover.
 This is the optional on-chain route. Existing `pepe-browser-game/1` games remain free browser games with display-only scores. On-chain launches start at https://pepe2pepe.fun/games/publish: select **On-chain game + token**, choose Ethereum or Robinhood Chain, confirm the creator wallet and terms, and sign the exact plan. Sponsorship requires administrator review. Do not send a token game through the ordinary build-website prompt.
 
 ## Build a game, not a server

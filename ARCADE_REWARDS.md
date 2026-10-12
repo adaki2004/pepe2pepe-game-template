@@ -1,5 +1,6 @@
 # Verified arcade + game token — pepe-arcade/1
 
+Read [ART_DIRECTION.md](ART_DIRECTION.md): every game needs a distinct visual identity and an original, gameplay-specific cover.
 This route is available only when the signed launch plan explicitly requests it. Browser-only games keep their existing contract. Contract-enforced puzzle games still follow ONCHAIN.md. Do not silently migrate an old launch or invent platform signing permissions.
 
 ## Build an excellent game around reviewed rules
@@ -75,3 +76,7 @@ Keep the existing on-chain export and Swarm workflow callback: actual job ID, wo
 This `rewards` object goes inside `onchain`. Never invent addresses/hash/launch receipts. The platform verifies deployed getters and runtime hash and stores this provenance before review. The sponsorship worker performs the registration callback after publication; do not create a nested job or run the browser-only release helper in the build. Existing owner consent without verifier authorization cannot enable this route.
 
 Ship `artifacts/validation.md` and machine-readable test evidence: exact engine hash, deterministic replay fixtures, malformed transcript rejection, responsive keyboard/touch controls, pause/restart/end state, wallet cancellation, pending/expired claims, tampering/wrong wallet, duplicate/cross-vault/cross-chain claim, underfunded vault and owner recovery deadline. Include commands actually run and any limitations. Never claim production rewards tested unless actual receipts exist. Admin reviews the immutable release before listing.
+
+## Creator operations
+
+See [CREATOR_CONSOLE.md](CREATOR_CONSOLE.md) for owner activity, funding and reward controls, and [BUILD_SIZES.md](BUILD_SIZES.md) for measured sizes and current publishing limits.

@@ -1,4 +1,3 @@
-// Keep aligned with the Pepe2Pepe website and sponsored build generator.
 export const GAME_TEMPLATE='https://github.com/adaki2004/pepe2pepe-game-template';
 export const BRIEF_LIMITS={name:60,idea:3600,design:2400,ux:2400};
 export const BRIEF_TOTAL_LIMIT=7000;
@@ -8,7 +7,7 @@ export function creativeBrief({name='',idea='',design='',ux=''}){
 }
 export const GAME_QUALITY_BRIEF=`Deliver a finished HTML5 game with a clear goal, satisfying core loop, onboarding, meaningful challenge, pause, game-over and instant replay. No concept page or placeholder prototype.
 
-Art direction: honour my idea, design and UX. Give characters, environments, menus, HUD and cover one distinctive identity: memorable silhouettes, intentional composition, cohesive colours, readable contrast, crafted animation and responsive hit/collect/win feedback. Use layered scenery, lighting, particles, camera motion and sound where they improve play. Honour reduced motion and include mute. Avoid generic AI-template styling, unrelated gradients, emoji-as-art, stock dashboard cards and placeholder geometry unless simple shapes serve a deliberate art style. Make an original game, not a reskin of the examples.
+Art direction: honour my idea, design and UX. Give characters, environments, menus, HUD and cover one distinctive identity: memorable silhouettes, intentional composition, cohesive colours, readable contrast, crafted animation and responsive hit/collect/win feedback. Use layered scenery, lighting, particles, camera motion and sound where they improve play. Honour reduced motion and include mute. Avoid generic AI-template styling, unrelated gradients, emoji-as-art, stock dashboard cards and placeholder geometry unless simple shapes serve a deliberate art style. Make an original game, not a reskin of the examples. Follow ART_DIRECTION.md in the template: design a distinctive cover around a real gameplay moment; choose your own composition, palette and typography. No repeated frog portrait, neon frame or interchangeable logo tile. Check the cover at 240px; it must look like THIS game.
 
 Optional tools: PixiJS (https://pixijs.com/) for 2D, Three.js (https://threejs.org/) for 3D, or Canvas/SVG/DOM for a small game. Choose one suitable stack, consult official docs, pin dependencies and bundle assets locally within the download budget. No required CDN or remote service. Keep loading fast and movement frame-rate independent on laptops and phones. Prefer a beautiful, focused scope over unfinished features.
 
