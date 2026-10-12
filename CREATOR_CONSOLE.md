@@ -2,6 +2,14 @@
 
 Open [Games → Creator Console](https://pepe2pepe.fun/games/creator) with the wallet that owns your approved token game. Robinhood games use [/robinhood/games/creator](https://pepe2pepe.fun/robinhood/games/creator). A wallet signature unlocks activity; it is not a transaction or spending approval.
 
+## Before the game is live
+
+The console also shows pending token builds saved in the current browser, filtered to the connected creator wallet. Follow the Swarm job directly from the build card. Contract builds, website publication and game review come before live player statistics. If you submitted from another browser, open **Your submissions** there: private browser receipts are not a public wallet directory.
+
+[Preview the console](https://pepe2pepe.fun/games/creator?example=1) without signing anything. The preview is prominently labelled **EXAMPLE DATA**; its numbers, wallets and SKYLINE HEIST release are illustrative, not evidence of a deployed game or real activity. It cannot fund a vault or save settings. Live and example player tables support wallet search; neither exposes raw IP addresses.
+
+A rejected workflow quote can receive at most two bounded website-plan clarifications before any payment quote exists. Only reviewed frontend/export wording can change; the signed creative brief, ownership, chain and launch economics stay fixed. Unsupported refusals stop for platform review. Do not submit again to clear a waiting or clarification state.
+
 ## Three distinct things
 
 | Capability | Current behaviour |
