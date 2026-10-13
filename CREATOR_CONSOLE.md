@@ -22,7 +22,7 @@ Contract-governed puzzles use their own reviewed rules and the existing contract
 
 ## What the owner can see
 
-Rolling 24-hour started runs, distinct player wallets, verified play time, verified reward amounts, and the latest 100 active wallets with per-wallet totals. Distinct wallets are not necessarily distinct humans. Failed or unfinished runs count as starts, not verified play time. Only the owner can unlock private activity. The reward-pool token balance is read on demand from the selected chain; it includes reservations and must not be confused with uncommitted funds.
+Rolling 24-hour started runs, confirmed player wallets, verified play time, verified reward amounts, and the latest 100 active wallets with per-wallet totals. Unsigned runs appear in aggregate counts, but only ownership-confirmed wallets enter the player table. Distinct wallets are not necessarily distinct humans. Failed or unfinished runs count as starts, not verified play time. Only the owner can unlock private activity. The reward-pool token balance is read on demand from the selected chain; it includes reservations and must not be confused with uncommitted funds.
 
 Earned amounts are issued reward entitlements, **not confirmed on-chain payments**. Use the vault's block-explorer link to inspect actual claims and transfers. Expired unclaimed entitlements remain in the historical earned count. No client-reported "claimed" flag is trusted. Raw IP addresses, session capabilities, replay inputs and claim signatures are not returned by the creator API.
 
@@ -31,7 +31,7 @@ Earned amounts are issued reward entitlements, **not confirmed on-chain payments
 - Pause admission of new reward runs.
 - Game reward budget per rolling 24 hours: default 10,000 points.
 - Per-wallet reward budget per rolling 24 hours: default 1,000 points.
-- Per-wallet started runs per rolling 24 hours: default 20, configurable 1–100. The global 20/hour wallet limit still applies.
+- Per-wallet authorized reward runs per rolling 24 hours: default 20, configurable 1–100. The global 20/hour wallet limit still applies.
 
 The launch policy is 1 token per point, max 100 points per run. Reward budgets can be set from 100 to 1,000,000 points; wallet budget cannot exceed the game budget. These are admission limits, not changes to the vault's immutable exchange rate. A new run reserves its full possible 100-point reward, then verification releases the unused amount. Signed entitlements count against the rolling earned budget even if not claimed. Admission and policy edits share a database lock so concurrent requests cannot overbook budgets.
 
@@ -43,7 +43,7 @@ The creator funds the vault with a wallet-confirmed token transfer. The platform
 
 ## API and authorization
 
-All creator requests are POST /v1/arcade/creator through the trusted website proxy, with an EIP-191 signature by the manifest's verified creator. The five-minute authorization message binds the game, action, timestamp, and (for edits) the exact ordered policy and revision. The backend validates owner independently; an address supplied by the browser is never proof of ownership. Edits use a monotonically increasing revision, so replaying an old signed edit cannot restore previous settings. Read authorization stays in browser memory only. No authorization belongs in a URL, analytics event or log.
+All creator requests are POST /v1/arcade/creator through the trusted website proxy, with an EIP-191 signature by the manifest's verified creator. Read authorization lasts 12 hours and is cached in this browser for the game, creator wallet and chain. Settings changes require a fresh five-minute authorization binding the game, action, timestamp, exact ordered policy and revision. The backend validates owner independently; an address supplied by the browser is never proof of ownership. Edits use a monotonically increasing revision, so replaying an old signed edit cannot restore previous settings. The read-only authorization is stored in browser localStorage until expiry; no spending permission is granted. No authorization belongs in a URL, analytics event or log.
 
 The public static game never receives owner authorization. AI is used only for creation guidance; the verifier executes only the built-in reviewed engine, never generated server code. See ARCADE_REWARDS.md for the gameplay interface.
 
